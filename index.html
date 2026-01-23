@@ -3,314 +3,322 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhD Research Proposal: Cognitive SCM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="PhD Research Framework - Ashok Kumar V - Bharathidasan University">
+    <title>PhD Research Framework | Ashok Kumar V</title>
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #f8fafc; color: #334155; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        :root {
+            --primary: #002147; /* University Navy */
+            --secondary: #f4f4f4;
+            --accent: #b30000; /* Academic Red */
+            --text: #333;
+            --light-text: #666;
+            --border: #e0e0e0;
+            --bg-white: #ffffff;
         }
-        .gradient-text {
-            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        
+        body {
+            font-family: 'Segoe UI', Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
         }
-        .diagram-box {
-            transition: all 0.3s ease;
+
+        /* --- Header & Profile Section --- */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        .diagram-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+        .univ-title {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
         }
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f1f1; }
-        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .scholar-details {
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.1);
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+        }
+
+        .scholar-details span {
+            display: block;
+        }
+
+        .reg-no {
+            font-weight: bold;
+            color: #ffd700; /* Gold for emphasis */
+            font-family: monospace;
+            font-size: 1.2rem;
+        }
+
+        /* --- Main Layout --- */
+        .container {
+            max-width: 1000px;
+            margin: -2rem auto 2rem;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        section {
+            background: var(--bg-white);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            border-left: 5px solid transparent;
+            transition: transform 0.2s ease;
+        }
+
+        section:hover {
+            border-left-color: var(--accent);
+        }
+
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 1.5rem;
+        }
+
+        /* --- Visual Grid Layouts --- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 1.5rem;
+            border-radius: 6px;
+        }
+
+        .card h4 {
+            color: var(--accent);
+            margin-top: 0;
+        }
+
+        /* --- Conceptual Model Visual --- */
+        .flow-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .flow-box {
+            width: 80%;
+            padding: 1rem;
+            text-align: center;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            background: #fdfdfd;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .flow-box.input { border-color: #555; border-style: dashed; }
+        .flow-box.process { background: #e3f2fd; border-color: #2196f3; }
+        .flow-box.output { background: #e8f5e9; border-color: #4caf50; }
+
+        .arrow { font-size: 1.5rem; color: #888; }
+
+        /* --- References List --- */
+        .ref-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .ref-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .ref-list li::before {
+            content: "📚";
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+            .scholar-details { width: 90%; padding: 1rem; }
+            .container { margin-top: 1rem; }
+        }
     </style>
 </head>
-<body class="min-h-screen">
+<body>
 
-    <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <i data-lucide="book-open" class="h-8 w-8 text-blue-800 mr-2"></i>
-                    <span class="font-bold text-xl text-gray-900">PhD Research Framework</span>
+    <header>
+        <div class="univ-title">Bharathidasan University, Tiruchirappalli</div>
+        <h1>PhD Research Framework</h1>
+        <div class="scholar-details">
+            <span style="font-size: 1.4rem; font-weight: bold;">ASHOK KUMAR V</span>
+            <span class="reg-no">Reg No: BSM25SCM057</span>
+            <span>Research Scholar</span>
+            <span style="font-size: 0.9rem; opacity: 0.9;">Department of BSM - Supply Chain Management</span>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Research Topic -->
+        <section style="text-align: center; border-left: none;">
+            <h2 style="border: none; color: var(--accent);">Proposed Research Title</h2>
+            <p style="font-size: 1.2rem; font-weight: 500;">
+                "Adaptive Business Intelligence for Resilient Supply Chain Ecosystems: <br>
+                A Design Science Approach"
+            </p>
+        </section>
+
+        <!-- Problem Statement -->
+        <section id="problem">
+            <h2>1. The Problem Context</h2>
+            <div class="grid-2">
+                <div>
+                    <h3>Theoretical Disconnect</h3>
+                    <p>
+                        Standard SCM literature, such as <strong>Chopra & Meindl (2016)</strong>, emphasizes "Strategic Fit"—aligning supply chain responsiveness with demand uncertainty. However, traditional models fail to account for the velocity of modern data, leading to a disconnect between <em>strategic planning</em> (theory) and <em>operational execution</em> (reality).
+                    </p>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#overview" class="text-gray-600 hover:text-blue-800 font-medium">Overview</a>
-                    <a href="#gaps" class="text-gray-600 hover:text-blue-800 font-medium">Research Gaps</a>
-                    <a href="#model" class="text-gray-600 hover:text-blue-800 font-medium">Conceptual Model</a>
-                    <a href="#methodology" class="text-gray-600 hover:text-blue-800 font-medium">Methodology</a>
+                <div>
+                    <h3>Operational Inefficiency</h3>
+                    <p>
+                        Despite the prevalence of ERP systems, organizations suffer from "Information Latency." <strong>Simchi-Levi et al. (2008)</strong> highlight that without real-time visibility, the <em>Bullwhip Effect</em> amplifies variance across the chain, increasing inventory holding costs and reducing service levels.
+                    </p>
                 </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Hero Section -->
-    <div id="overview" class="bg-gradient-to-br from-slate-50 to-blue-50 py-16">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <span class="inline-flex items-center rounded-full bg-blue-100 px-3 py-0.5 text-sm font-medium text-blue-800 mb-4">
-                    Research Proposal Draft
-                </span>
-                <h1 class="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-                    Adaptive Business Intelligence for<br>
-                    <span class="gradient-text">Resilient Supply Chain Ecosystems</span>
-                </h1>
-                <p class="mt-4 max-w-2xl mx-auto text-xl text-gray-600">
-                    Bridging the gap between traditional SCM theory and real-time data analytics using Python, SQL, and Dashboarding technologies.
-                </p>
-                
-                <div class="mt-8 flex justify-center space-x-4">
-                    <div class="flex items-center text-sm text-gray-500">
-                        <i data-lucide="user" class="h-4 w-4 mr-1"></i> Researcher: Ashok Kumar V
-                    </div>
-                    <div class="flex items-center text-sm text-gray-500">
-                        <i data-lucide="award" class="h-4 w-4 mr-1"></i> Target Degree: PhD in SCM
-                    </div>
+        <!-- Objectives -->
+        <section id="objectives">
+            <h2>2. Research Objectives</h2>
+            <ul style="line-height: 1.8;">
+                <li><strong>To Develop:</strong> A Dynamic Decision Support System (DDSS) framework that integrates disparate logistics data sources (SQL/IoT) into a unified cognitive model.</li>
+                <li><strong>To Analyze:</strong> The impact of real-time Visual Analytics (Power BI/Tableau) on reducing information asymmetry in multi-echelon networks.</li>
+                <li><strong>To Propose:</strong> An affordable, low-code implementation strategy for SMEs to achieve "Agility" as defined by <strong>Christopher (2000)</strong>.</li>
+            </ul>
+        </section>
+
+        <!-- Conceptual Framework -->
+        <section id="framework">
+            <h2>3. Conceptual Framework Architecture</h2>
+            <p>This study adopts a three-tiered architecture to transform raw data into actionable supply chain intelligence.</p>
+            
+            <div class="flow-container">
+                <div class="flow-box input">
+                    <strong>Input Layer (Data Acquisition)</strong><br>
+                    <small>ERP Transactions • Market Feeds • IoT Sensors</small>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-box process">
+                    <strong>Processing Layer (The Cognitive Engine)</strong><br>
+                    <small>Python ETL • Predictive Modeling (ML) • Demand Sensing Algorithms</small>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="flow-box output">
+                    <strong>Output Layer (Decision Support)</strong><br>
+                    <small>Real-time Dashboards • Inventory Alerts • Strategic Recommendations</small>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Methodology -->
+        <section id="methodology">
+            <h2>4. Research Methodology</h2>
+            <p>The research follows the <strong>Design Science Research (DSR)</strong> paradigm as outlined by <strong>Hevner et al. (2004)</strong>, suitable for creating and evaluating IT artifacts in business contexts.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h4>The Relevance Cycle</h4>
+                    <p>Identifying problems within the specific context of Logistics & SCM (using Case Studies & Interviews).</p>
+                </div>
+                <div class="card">
+                    <h4>The Design Cycle</h4>
+                    <p>Iterative development of the Framework and Software Prototype (Python/Power BI).</p>
+                </div>
+                <div class="card">
+                    <h4>The Rigor Cycle</h4>
+                    <p>Grounding the solution in established theories: <em>Theory of Constraints</em> and <em>Information Processing Theory</em>.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic References -->
+        <section id="references">
+            <h2>5. Key Academic References</h2>
+            <ul class="ref-list">
+                <li>
+                    <strong>Chopra, S., & Meindl, P. (2016).</strong> <em>Supply Chain Management: Strategy, Planning, and Operation</em>. Pearson Education. (Standard Text).
+                </li>
+                <li>
+                    <strong>Christopher, M. (2016).</strong> <em>Logistics & Supply Chain Management</em>. Pearson UK. (Focus: Agility & Resilience).
+                </li>
+                <li>
+                    <strong>Hevner, A. R., March, S. T., Park, J., & Ram, S. (2004).</strong> "Design Science in Information Systems Research." <em>MIS Quarterly</em>, 28(1), 75-105. (Methodology).
+                </li>
+                <li>
+                    <strong>Simchi-Levi, D., Kaminsky, P., & Simchi-Levi, E. (2008).</strong> <em>Designing and Managing the Supply Chain: Concepts, Strategies, and Case Studies</em>. McGraw-Hill.
+                </li>
+            </ul>
+        </section>
+
     </div>
 
-    <!-- Main Content Grid -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        
-        <!-- Context & Problem Statement -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div class="glass-panel p-8 rounded-xl">
-                <h2 class="text-2xl font-bold mb-4 flex items-center">
-                    <i data-lucide="alert-triangle" class="h-6 w-6 text-amber-500 mr-2"></i>
-                    The Problem Statement
-                </h2>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    Traditional Supply Chain Management (SCM) relies heavily on historical data and static forecasting methods. As highlighted in your reference texts (<i>scintro_s.pdf</i>), obstacles to achieving "Strategic Fit" include <strong>information coordination issues</strong> and <strong>local optimization</strong> rather than global optimization.
-                </p>
-                <p class="text-gray-600 leading-relaxed">
-                    Despite the abundance of data (ERP, IoT), organizations struggle to convert this into actionable, real-time intelligence. There is a disconnect between <strong>strategic planning</strong> (MBA theory) and <strong>operational data execution</strong> (BI Analysis).
-                </p>
-            </div>
-            
-            <div class="glass-panel p-8 rounded-xl bg-slate-800 text-white border-none">
-                <h2 class="text-2xl font-bold mb-4 flex items-center">
-                    <i data-lucide="target" class="h-6 w-6 text-blue-400 mr-2"></i>
-                    Research Objectives
-                </h2>
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <i data-lucide="check-circle" class="h-5 w-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
-                        <span>To develop a <strong>Dynamic Decision Support System (DDSS)</strong> framework that integrates disparate logistics data sources (SQL/SAP).</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="check-circle" class="h-5 w-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
-                        <span>To quantify the impact of <strong>real-time visualization</strong> (Power BI/Tableau) on reducing the Bullwhip Effect in multi-echelon chains.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <i data-lucide="check-circle" class="h-5 w-5 text-green-400 mt-1 mr-3 flex-shrink-0"></i>
-                        <span>To propose a predictive model using <strong>Python-based Machine Learning</strong> for demand sensing in volatile markets (e.g., FMCG/Logistics).</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Research Gaps Visualization -->
-        <div id="gaps" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-10">Identifying the Research Gaps</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Gap 1 -->
-                <div class="diagram-box bg-white p-6 rounded-lg border border-gray-200">
-                    <div class="h-12 w-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="bar-chart-2" class="h-6 w-6 text-red-600"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">The Latency Gap</h3>
-                    <p class="text-sm text-gray-600">
-                        <strong>Literature:</strong> Discusses "Information Sharing" (Ref: 3SupplyChainManagement.pdf).<br>
-                        <strong>Reality:</strong> Data exists but reporting is retrospective.<br>
-                        <strong>Contribution:</strong> Moving from Descriptive Analytics to <em>Prescriptive Analytics</em>.
-                    </p>
-                </div>
-                <!-- Gap 2 -->
-                <div class="diagram-box bg-white p-6 rounded-lg border border-gray-200">
-                    <div class="h-12 w-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="settings" class="h-6 w-6 text-blue-600"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">The Technical-Managerial Gap</h3>
-                    <p class="text-sm text-gray-600">
-                        <strong>Literature:</strong> Focuses on management strategy or pure CS algorithms.<br>
-                        <strong>Reality:</strong> Managers lack tools to interpret complex algorithms.<br>
-                        <strong>Contribution:</strong> Creating "Human-in-the-loop" visualization dashboards (UI/UX in SCM).
-                    </p>
-                </div>
-                <!-- Gap 3 -->
-                <div class="diagram-box bg-white p-6 rounded-lg border border-gray-200">
-                    <div class="h-12 w-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                        <i data-lucide="users" class="h-6 w-6 text-purple-600"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">The SME Adoption Gap</h3>
-                    <p class="text-sm text-gray-600">
-                        <strong>Literature:</strong> Enterprise-level solutions (SAP) are discussed.<br>
-                        <strong>Reality:</strong> SMEs lack affordable BI implementation frameworks.<br>
-                        <strong>Contribution:</strong> Low-code/No-code automation strategies for logistics SMEs.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Conceptual Model Diagram -->
-        <div id="model" class="mb-16 bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
-            <h2 class="text-3xl font-bold text-center mb-8">Proposed Conceptual Framework</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
-                
-                <!-- Input Layer -->
-                <div class="flex flex-col items-center w-full md:w-1/4 p-4 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50">
-                    <h4 class="font-bold text-gray-700 mb-2">Data Sources</h4>
-                    <div class="space-y-2 w-full text-center">
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">ERP / SAP Data</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">IoT Sensors</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">Market Feeds</div>
-                    </div>
-                    <p class="text-xs text-gray-500 mt-2">SQL / APIs</p>
-                </div>
-
-                <!-- Arrow -->
-                <i data-lucide="arrow-right" class="h-8 w-8 text-gray-400 transform rotate-90 md:rotate-0"></i>
-
-                <!-- Processing Layer (Your Core Skills) -->
-                <div class="flex flex-col items-center w-full md:w-1/4 p-4 border-2 border-blue-500 rounded-xl bg-blue-50 relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-bl">Your Core Contribution</div>
-                    <h4 class="font-bold text-blue-900 mb-2">Analytical Engine</h4>
-                    <div class="space-y-2 w-full text-center">
-                        <div class="bg-white p-2 rounded shadow-sm text-sm font-semibold border-l-4 border-blue-500">Python ETL</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm font-semibold border-l-4 border-blue-500">Predictive Models</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm font-semibold border-l-4 border-blue-500">Automation Logic</div>
-                    </div>
-                </div>
-
-                <!-- Arrow -->
-                <i data-lucide="arrow-right" class="h-8 w-8 text-gray-400 transform rotate-90 md:rotate-0"></i>
-
-                <!-- Output Layer -->
-                <div class="flex flex-col items-center w-full md:w-1/4 p-4 border-2 border-dashed border-gray-300 rounded-xl bg-gray-50">
-                    <h4 class="font-bold text-gray-700 mb-2">Decision Layer</h4>
-                    <div class="space-y-2 w-full text-center">
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">Interactive Dashboards</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">Alerts & Triggers</div>
-                        <div class="bg-white p-2 rounded shadow-sm text-sm">Strat. Planning</div>
-                    </div>
-                    <p class="text-xs text-gray-500 mt-2">Power BI / Tableau</p>
-                </div>
-
-                <!-- Arrow -->
-                <i data-lucide="arrow-right" class="h-8 w-8 text-gray-400 transform rotate-90 md:rotate-0"></i>
-
-                <!-- Impact -->
-                <div class="flex flex-col items-center w-full md:w-1/4 p-4 bg-green-50 rounded-xl border border-green-200">
-                    <h4 class="font-bold text-green-800 mb-2">SCM Outcome</h4>
-                    <div class="text-center">
-                        <p class="text-sm font-medium">Increased Resiliency</p>
-                        <p class="text-sm font-medium text-gray-500">+</p>
-                        <p class="text-sm font-medium">Reduced Inventory Costs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Methodology Section -->
-        <div id="methodology" class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h2 class="text-3xl font-bold mb-6">Proposed Methodology</h2>
-                <div class="space-y-6">
-                    <div class="flex">
-                        <div class="mr-4 mt-1">
-                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white font-bold text-sm">1</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Mixed Methods Research</h4>
-                            <p class="text-gray-600 text-sm">Combining quantitative data analysis (analyzing historical sales logs) with qualitative case studies (interviewing logistics managers about dashboard usability).</p>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="mr-4 mt-1">
-                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white font-bold text-sm">2</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Design Science Research (DSR)</h4>
-                            <p class="text-gray-600 text-sm">This is critical for your profile. You will not just "study" a phenomenon; you will <strong>build an artifact</strong> (a Python/Power BI prototype) and test its utility in a real-world scenario.</p>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="mr-4 mt-1">
-                            <span class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-900 text-white font-bold text-sm">3</span>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-lg">Simulation</h4>
-                            <p class="text-gray-600 text-sm">Using Python to simulate supply chain disruptions and measuring how quickly your proposed BI alerts allow for corrective action compared to traditional methods.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-gray-100 p-6 rounded-xl">
-                <h3 class="font-bold text-lg mb-4">Required Tool Stack (Based on your Skills)</h3>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="bg-white p-3 rounded shadow-sm border-l-4 border-yellow-400">
-                        <div class="text-xs text-gray-500 uppercase">Data Extraction</div>
-                        <div class="font-bold">SQL & Excel VBA</div>
-                    </div>
-                    <div class="bg-white p-3 rounded shadow-sm border-l-4 border-blue-400">
-                        <div class="text-xs text-gray-500 uppercase">Processing</div>
-                        <div class="font-bold">Python (Pandas)</div>
-                    </div>
-                    <div class="bg-white p-3 rounded shadow-sm border-l-4 border-purple-400">
-                        <div class="text-xs text-gray-500 uppercase">Analysis</div>
-                        <div class="font-bold">Scikit-Learn (ML)</div>
-                    </div>
-                    <div class="bg-white p-3 rounded shadow-sm border-l-4 border-orange-400">
-                        <div class="text-xs text-gray-500 uppercase">Presentation</div>
-                        <div class="font-bold">Power BI / Tableau</div>
-                    </div>
-                </div>
-                
-                <div class="mt-6 p-4 bg-white rounded border border-gray-200">
-                    <h4 class="font-bold text-sm text-gray-800 mb-2">PhD Timeline Estimation</h4>
-                    <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
-                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
-                    </div>
-                    <div class="flex justify-between text-xs text-gray-500">
-                        <span>Lit Review</span>
-                        <span>Model Design</span>
-                        <span>Data Collect</span>
-                        <span>Thesis Writeup</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-
-    <footer class="bg-slate-900 text-white py-12 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-xl font-serif mb-4">Ashok Kumar V</h3>
-            <p class="text-slate-400 mb-8 max-w-lg mx-auto">
-                Leveraging Business Intelligence and Data Analytics to solve complex Logistics and Supply Chain challenges.
-            </p>
-            <div class="border-t border-slate-700 pt-8 text-sm text-slate-500">
-                &copy; 2026 Research Proposal Generated for Academic Use.
-            </div>
-        </div>
+    <footer>
+        <p><strong>© 2026 ASHOK KUMAR V (BSM25SCM057)</strong><br>
+        Department of BSM - Supply Chain Management<br>
+        Bharathidasan University, Tiruchirappalli</p>
+        <p style="font-size: 0.8rem; color: #999;">Designed for GitHub Pages</p>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
 </body>
 </html>
